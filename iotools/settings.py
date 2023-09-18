@@ -1,0 +1,6 @@
+
+settings = {
+    "SHOW_IMPORT_WARNINGS": True,
+    "SHOW_DEFAULT_BEHAVIOR_WARNINGS": True,
+    "SHOW_DISK_USE_WARNINGS": True,
+}

@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "iotools-wrappers"
+version = "0.1.0"
+description = "Provides a unified syntax for reading and writing data to files"
+authors = ["Alban Pierre <apierre.work@pm.me>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/albanpierre/iotools-wrappers"
+homepage = "https://github.com/albanpierre/iotools-wrappers"
+packages = [{include = "iotools"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <4"
+fsspec = "^2022.11.0"
+
+[tool.poetry.dev-dependencies]
+# for io backends
+imageio = "^2.29.0"
+imageio-ffmpeg = "^0.4.7"
+numpy = "^1.23.5"
+opencv-python = "^4.7.0.68"
+pandas = "^1.5.1"
+Pillow = "^9.3.0"
+PyYAML = "^6.0"
+scikit-image = "^0.21.0"
+xmltodict = "^0.13.0"
+zstandard = "^0.19.0"
+# for package build
+coverage = "^7.3.1"
+flake8 = "^5.0.4"
+Flake8-pyproject = "^1.2.3"
+pytest = "^7.2.0"
+
+[tool.flake8]
+ignore = "W503,E402"
+max-line-length = 120
+exclude = ["__pycache__"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "."
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:.*imageio_ffmpeg.*",
+]
+
+[tool.coverage.run]
+omit = [
+    ".*",
+    "config*.py",
+    "*/*-packages/*",
+    "tests/*",
+]
+
+[tool.coverage.report]
+fail_under = 90
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

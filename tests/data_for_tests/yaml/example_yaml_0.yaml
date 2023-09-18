@@ -1,0 +1,4 @@
+image: some/path/to
+redis:
+  number: 5
+  secret: 4bX-7_89.gh0
