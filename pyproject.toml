@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "iotools-wrappers"
-version = "0.1.0"
+version = "0.1.1"
 description = "Provides a unified syntax for reading and writing data to files"
 authors = ["Alban Pierre <apierre.work@pm.me>"]
 license = "MIT"
