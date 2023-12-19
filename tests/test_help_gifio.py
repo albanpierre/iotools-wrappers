@@ -3,12 +3,12 @@ import os
 import numpy as np
 
 from iotools.bytesio import load_bytes
-from simplified_iotools.gifio_using_imageio import (
+from iotools.simplified.gifio_using_imageio import (
     decode_gif_using_imageio, encode_gif_using_imageio,
     read_gif_using_imageio, write_gif_using_imageio,
     load_gif_using_imageio, save_gif_using_imageio,
 )
-from simplified_iotools.gifio import decode_gif, encode_gif, read_gif, write_gif, load_gif, save_gif
+from iotools.simplified.gifio import decode_gif, encode_gif, read_gif, write_gif, load_gif, save_gif
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -129,7 +129,7 @@ def test_save_gif_using_imageio():
 
 def test_help_examples_gif_using_imageio():
     save_gif_using_imageio("filename.gif", data[0])
-    import examples.examples_gif_using_imageio  # noqa
+    import iotools.examples.examples_gif_using_imageio  # noqa
     os.remove("filename.gif")
 
 
@@ -202,5 +202,5 @@ def test_save_gif():
 
 def test_help_examples_gif():
     save_gif("filename.gif", data[0])
-    import examples.examples_gif  # noqa
+    import iotools.examples.examples_gif  # noqa
     os.remove("filename.gif")

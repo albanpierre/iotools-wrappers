@@ -4,27 +4,27 @@ import numpy as np
 import PIL.Image as PilImage
 
 from iotools.bytesio import load_bytes
-from simplified_iotools.jpgio_using_imageio import (
+from iotools.simplified.jpgio_using_imageio import (
     decode_jpg_using_imageio, encode_jpg_using_imageio,
     read_jpg_using_imageio, write_jpg_using_imageio,
     load_jpg_using_imageio, save_jpg_using_imageio
 )
-from simplified_iotools.jpgio_using_skimage import (
+from iotools.simplified.jpgio_using_skimage import (
     decode_jpg_using_skimage, encode_jpg_using_skimage,
     read_jpg_using_skimage, write_jpg_using_skimage,
     load_jpg_using_skimage, save_jpg_using_skimage
 )
-from simplified_iotools.jpgio_using_pil import (
+from iotools.simplified.jpgio_using_pil import (
     decode_jpg_using_pil, encode_jpg_using_pil,
     read_jpg_using_pil, write_jpg_using_pil,
     load_jpg_using_pil, save_jpg_using_pil
 )
-from simplified_iotools.jpgio_using_cv2 import (
+from iotools.simplified.jpgio_using_cv2 import (
     decode_jpg_using_cv2, encode_jpg_using_cv2,
     read_jpg_using_cv2, write_jpg_using_cv2,
     load_jpg_using_cv2, save_jpg_using_cv2
 )
-from simplified_iotools.jpgio import (
+from iotools.simplified.jpgio import (
     decode_jpg, encode_jpg, read_jpg, write_jpg, load_jpg, save_jpg
 )
 
@@ -139,7 +139,7 @@ def test_help_save_jpg_using_imageio():
 
 def test_help_examples_jpg_using_imageio():
     save_jpg_using_imageio("filename.jpg", data[0])
-    import examples.examples_jpg_using_imageio  # noqa
+    import iotools.examples.examples_jpg_using_imageio  # noqa
     os.remove("filename.jpg")
 
 
@@ -203,7 +203,7 @@ def test_help_save_jpg_using_skimage():
 
 def test_help_examples_jpg_using_skimage():
     save_jpg_using_skimage("filename.jpg", data[0])
-    import examples.examples_jpg_using_skimage  # noqa
+    import iotools.examples.examples_jpg_using_skimage  # noqa
     os.remove("filename.jpg")
 
 
@@ -273,7 +273,7 @@ def test_help_save_jpg_using_pil():
 
 def test_help_examples_jpg_using_pil():
     save_jpg_using_pil("filename.jpg", PilImage.fromarray(data[0]))
-    import examples.examples_jpg_using_pil  # noqa
+    import iotools.examples.examples_jpg_using_pil  # noqa
     os.remove("filename.jpg")
 
 
@@ -343,7 +343,7 @@ def test_help_save_jpg_using_cv2():
 
 def test_help_examples_jpg_using_cv2():
     save_jpg_using_cv2("filename.jpg", data[0])
-    import examples.examples_jpg_using_cv2  # noqa
+    import iotools.examples.examples_jpg_using_cv2  # noqa
     os.remove("filename.jpg")
 
 
@@ -407,5 +407,5 @@ def test_help_save_jpg():
 
 def test_help_examples_jpg():
     save_jpg("filename.jpg", data[0])
-    import examples.examples_jpg  # noqa
+    import iotools.examples.examples_jpg  # noqa
     os.remove("filename.jpg")

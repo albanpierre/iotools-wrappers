@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 from iotools.bytesio import load_bytes
-from simplified_iotools.npyio import decode_npy, encode_npy, read_npy, write_npy, load_npy, save_npy
+from iotools.simplified.npyio import decode_npy, encode_npy, read_npy, write_npy, load_npy, save_npy
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -68,5 +68,5 @@ def test_help_save_npy():
 
 def test_help_examples_npy():
     save_npy("filename.npy", data[0])
-    import examples.examples_npy  # noqa
+    import iotools.examples.examples_npy  # noqa
     os.remove("filename.npy")

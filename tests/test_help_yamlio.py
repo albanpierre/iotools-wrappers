@@ -2,7 +2,7 @@
 import os
 
 from iotools.txtio import load_txt
-from simplified_iotools.yamlio import decode_yaml, encode_yaml, read_yaml, write_yaml, load_yaml, save_yaml
+from iotools.simplified.yamlio import decode_yaml, encode_yaml, read_yaml, write_yaml, load_yaml, save_yaml
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -65,5 +65,5 @@ def test_help_save_yaml():
 
 def test_help_examples_yaml():
     save_yaml("filename.yaml", data[0])
-    import examples.examples_yaml  # noqa
+    import iotools.examples.examples_yaml  # noqa
     os.remove("filename.yaml")

@@ -2,7 +2,7 @@
 import os
 
 from iotools.txtio import load_txt
-from simplified_iotools.jsonio import decode_json, encode_json, read_json, write_json, load_json, save_json
+from iotools.simplified.jsonio import decode_json, encode_json, read_json, write_json, load_json, save_json
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -68,5 +68,5 @@ def test_help_save_json():
 
 def test_help_examples_json():
     save_json("filename.json", data[0])
-    import examples.examples_json  # noqa
+    import iotools.examples.examples_json  # noqa
     os.remove("filename.json")

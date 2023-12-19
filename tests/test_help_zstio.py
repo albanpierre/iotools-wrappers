@@ -4,7 +4,7 @@ import os
 from iotools.bytesio import load_bytes
 from iotools.jsonio import decode_json, encode_json
 from iotools.pickleio import decode_pickle, encode_pickle
-from simplified_iotools.zstio import decode_zst, encode_zst, read_zst, write_zst, load_zst, save_zst
+from iotools.simplified.zstio import decode_zst, encode_zst, read_zst, write_zst, load_zst, save_zst
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -116,5 +116,5 @@ def test_save_zst():
 
 def test_help_examples_zst():
     save_zst("filename.json.zst", encode_json(data_json[0]))
-    import examples.examples_zst  # noqa
+    import iotools.examples.examples_zst  # noqa
     os.remove("filename.json.zst")

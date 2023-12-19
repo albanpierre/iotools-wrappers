@@ -2,7 +2,7 @@
 import os
 
 from iotools.bytesio import load_bytes
-from simplified_iotools.pickleio import (
+from iotools.simplified.pickleio import (
     decode_pickle, encode_pickle, read_pickle, write_pickle, load_pickle, save_pickle
 )
 
@@ -70,5 +70,5 @@ def test_help_save_pickle():
 
 def test_help_examples_pickle():
     save_pickle("filename.pickle", data[0])
-    import examples.examples_pickle  # noqa
+    import iotools.examples.examples_pickle  # noqa
     os.remove("filename.pickle")

@@ -8,7 +8,7 @@ from iotools.npyio import decode_npy, encode_npy
 from iotools.pngio import decode_png, encode_png
 from iotools.jsonio import decode_json, encode_json
 from iotools.pickleio import decode_pickle, encode_pickle
-from simplified_iotools.zipio import decode_zip, encode_zip, read_zip, write_zip, load_zip, save_zip
+from iotools.simplified.zipio import decode_zip, encode_zip, read_zip, write_zip, load_zip, save_zip
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -132,5 +132,5 @@ def test_help_save_zip():
 
 def test_help_examples_zip():
     save_zip("filename.zip", _encode_sub_files(data[0]))
-    import examples.examples_zip  # noqa
+    import iotools.examples.examples_zip  # noqa
     os.remove("filename.zip")

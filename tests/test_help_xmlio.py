@@ -3,7 +3,7 @@ import os
 from collections import OrderedDict
 
 from iotools.txtio import load_txt
-from simplified_iotools.xmlio import decode_xml, encode_xml, read_xml, write_xml, load_xml, save_xml
+from iotools.simplified.xmlio import decode_xml, encode_xml, read_xml, write_xml, load_xml, save_xml
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -76,5 +76,5 @@ def test_help_save_xml():
 
 def test_help_examples_xml():
     save_xml("filename.xml", data[0])
-    import examples.examples_xml  # noqa
+    import iotools.examples.examples_xml  # noqa
     os.remove("filename.xml")

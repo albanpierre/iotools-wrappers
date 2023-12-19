@@ -5,7 +5,7 @@ from iotools.bytesio import load_bytes
 from iotools.jsonio import decode_json, encode_json
 from iotools.pickleio import decode_pickle, encode_pickle
 from iotools.tario import decode_tar, encode_tar
-from simplified_iotools.gzio import decode_gz, encode_gz, read_gz, write_gz, load_gz, save_gz
+from iotools.simplified.gzio import decode_gz, encode_gz, read_gz, write_gz, load_gz, save_gz
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -121,5 +121,5 @@ def test_save_gz():
 
 def test_help_examples_gz():
     save_gz("filename.tar.gz", encode_tar(data_tar[0]))
-    import examples.examples_gz  # noqa
+    import iotools.examples.examples_gz  # noqa
     os.remove("filename.tar.gz")

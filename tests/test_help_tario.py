@@ -8,7 +8,7 @@ from iotools.npyio import decode_npy, encode_npy
 from iotools.pngio import decode_png, encode_png
 from iotools.jsonio import decode_json, encode_json
 from iotools.pickleio import decode_pickle, encode_pickle
-from simplified_iotools.tario import decode_tar, encode_tar, read_tar, write_tar, load_tar, save_tar
+from iotools.simplified.tario import decode_tar, encode_tar, read_tar, write_tar, load_tar, save_tar
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -132,5 +132,5 @@ def test_help_save_tar():
 
 def test_help_examples_tar():
     save_tar("filename.tar", _encode_sub_files(data[0]))
-    import examples.examples_tar  # noqa
+    import iotools.examples.examples_tar  # noqa
     os.remove("filename.tar")

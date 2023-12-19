@@ -3,17 +3,17 @@ import os
 import numpy as np
 
 from iotools.bytesio import load_bytes
-from simplified_iotools.aviio_using_imageio import (
+from iotools.simplified.aviio_using_imageio import (
     decode_avi_using_imageio, encode_avi_using_imageio,
     read_avi_using_imageio, write_avi_using_imageio,
     load_avi_using_imageio, save_avi_using_imageio,
 )
-from simplified_iotools.aviio_using_cv2 import (
+from iotools.simplified.aviio_using_cv2 import (
     decode_avi_using_cv2, encode_avi_using_cv2,
     read_avi_using_cv2, write_avi_using_cv2,
     load_avi_using_cv2, save_avi_using_cv2,
 )
-from simplified_iotools.aviio import decode_avi, encode_avi, read_avi, write_avi, load_avi, save_avi
+from iotools.simplified.aviio import decode_avi, encode_avi, read_avi, write_avi, load_avi, save_avi
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -134,7 +134,7 @@ def test_save_avi_using_imageio():
 
 def test_help_examples_avi_using_imageio():
     save_avi_using_imageio("filename.avi", data[0])
-    import examples.examples_avi_using_imageio  # noqa
+    import iotools.examples.examples_avi_using_imageio  # noqa
     os.remove("filename.avi")
 
 
@@ -207,7 +207,7 @@ def test_save_avi_using_cv2():
 
 def test_help_examples_avi_using_cv2():
     save_avi_using_cv2("filename.avi", data[0])
-    import examples.examples_avi_using_cv2  # noqa
+    import iotools.examples.examples_avi_using_cv2  # noqa
     os.remove("filename.avi")
 
 
@@ -280,5 +280,5 @@ def test_save_avi():
 
 def test_help_examples_avi():
     save_avi("filename.avi", data[0])
-    import examples.examples_avi  # noqa
+    import iotools.examples.examples_avi  # noqa
     os.remove("filename.avi")

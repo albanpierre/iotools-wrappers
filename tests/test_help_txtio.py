@@ -1,7 +1,7 @@
 
 import os
 
-from simplified_iotools.txtio import decode_txt, encode_txt, read_txt, write_txt, load_txt, save_txt
+from iotools.simplified.txtio import decode_txt, encode_txt, read_txt, write_txt, load_txt, save_txt
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -67,5 +67,5 @@ def test_help_save_txt():
 
 def test_help_examples_txt():
     save_txt("filename.txt", data[0])
-    import examples.examples_txt  # noqa
+    import iotools.examples.examples_txt  # noqa
     os.remove("filename.txt")

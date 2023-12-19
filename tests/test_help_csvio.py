@@ -2,17 +2,17 @@
 import os
 
 from iotools.txtio import load_txt
-from simplified_iotools.csvio_using_csv import (
+from iotools.simplified.csvio_using_csv import (
     decode_csv_using_csv, encode_csv_using_csv,
     read_csv_using_csv, write_csv_using_csv,
     load_csv_using_csv, save_csv_using_csv
 )
-from simplified_iotools.csvio_using_pandas import (
+from iotools.simplified.csvio_using_pandas import (
     decode_csv_using_pandas, encode_csv_using_pandas,
     read_csv_using_pandas, write_csv_using_pandas,
     load_csv_using_pandas, save_csv_using_pandas
 )
-from simplified_iotools.csvio import decode_csv, encode_csv, read_csv, write_csv, load_csv, save_csv
+from iotools.simplified.csvio import decode_csv, encode_csv, read_csv, write_csv, load_csv, save_csv
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -83,7 +83,7 @@ def test_save_csv_using_csv():
 
 def test_help_examples_csv_using_csv():
     save_csv_using_csv("filename.csv", data[0])
-    import examples.examples_csv_using_csv  # noqa
+    import iotools.examples.examples_csv_using_csv  # noqa
     os.remove("filename.csv")
 
 
@@ -144,7 +144,7 @@ def test_save_csv_using_pandas():
 
 def test_help_examples_csv_using_pandas():
     save_csv_using_pandas("filename.csv", data[0])
-    import examples.examples_csv_using_pandas  # noqa
+    import iotools.examples.examples_csv_using_pandas  # noqa
     os.remove("filename.csv")
 
 
@@ -205,5 +205,5 @@ def test_save_csv():
 
 def test_help_examples_csv():
     save_csv("filename.csv", data[0])
-    import examples.examples_csv  # noqa
+    import iotools.examples.examples_csv  # noqa
     os.remove("filename.csv")

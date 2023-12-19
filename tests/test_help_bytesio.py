@@ -1,7 +1,7 @@
 
 import os
 
-from simplified_iotools.bytesio import decode_bytes, encode_bytes, read_bytes, write_bytes, load_bytes, save_bytes
+from iotools.simplified.bytesio import decode_bytes, encode_bytes, read_bytes, write_bytes, load_bytes, save_bytes
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -67,5 +67,5 @@ def test_help_save_bytes():
 
 def test_help_examples_bytes():
     save_bytes("filename.bytes", data[0])
-    import examples.examples_bytes  # noqa
+    import iotools.examples.examples_bytes  # noqa
     os.remove("filename.bytes")

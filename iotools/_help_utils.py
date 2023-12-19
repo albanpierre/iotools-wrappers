@@ -1,9 +1,9 @@
 
 import os
 
-ROOT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 EXAMPLES_PATH = os.path.join(ROOT_PATH, "examples")
-SIMPLIFIED_IOTOOLS_PATH = os.path.join(ROOT_PATH, "simplified_iotools")
+SIMPLIFIED_IOTOOLS_PATH = os.path.join(ROOT_PATH, "simplified")
 
 
 def _help_default(extension):

@@ -3,17 +3,17 @@ import os
 import numpy as np
 
 from iotools.bytesio import load_bytes
-from simplified_iotools.mp4io_using_imageio import (
+from iotools.simplified.mp4io_using_imageio import (
     decode_mp4_using_imageio, encode_mp4_using_imageio,
     read_mp4_using_imageio, write_mp4_using_imageio,
     load_mp4_using_imageio, save_mp4_using_imageio,
 )
-from simplified_iotools.mp4io_using_cv2 import (
+from iotools.simplified.mp4io_using_cv2 import (
     decode_mp4_using_cv2, encode_mp4_using_cv2,
     read_mp4_using_cv2, write_mp4_using_cv2,
     load_mp4_using_cv2, save_mp4_using_cv2,
 )
-from simplified_iotools.mp4io import decode_mp4, encode_mp4, read_mp4, write_mp4, load_mp4, save_mp4
+from iotools.simplified.mp4io import decode_mp4, encode_mp4, read_mp4, write_mp4, load_mp4, save_mp4
 
 
 TEST_DATA_PATH = "tests/data_for_tests/"
@@ -134,7 +134,7 @@ def test_save_mp4_using_imageio():
 
 def test_help_examples_mp4_using_imageio():
     save_mp4_using_imageio("filename.mp4", data[0])
-    import examples.examples_mp4_using_imageio  # noqa
+    import iotools.examples.examples_mp4_using_imageio  # noqa
     os.remove("filename.mp4")
 
 
@@ -207,7 +207,7 @@ def test_save_mp4_using_cv2():
 
 def test_help_examples_mp4_using_cv2():
     save_mp4_using_cv2("filename.mp4", data[0])
-    import examples.examples_mp4_using_cv2  # noqa
+    import iotools.examples.examples_mp4_using_cv2  # noqa
     os.remove("filename.mp4")
 
 
@@ -280,5 +280,5 @@ def test_save_mp4():
 
 def test_help_examples_mp4():
     save_mp4("filename.mp4", data[0])
-    import examples.examples_mp4  # noqa
+    import iotools.examples.examples_mp4  # noqa
     os.remove("filename.mp4")
